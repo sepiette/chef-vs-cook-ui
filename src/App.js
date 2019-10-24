@@ -1,26 +1,27 @@
 import React from 'react';
-import { Route, Link, Switch } from 'react-router-dom';
+import { Route, Link, Switch, BrowserRouter } from 'react-router-dom';
 import './App.css';
-import Recipes from './components/Recipes';
+import Recipes from './components/Recipes/Recipes';
 
 function App() {
+
   return (
-    <div className="App">
-      <h1 className="display-4">Food Recipes</h1>
-      <p className="lead">
-        A curated list of recipes for the best homemade meal and delicacies.
+    <BrowserRouter>
+      <div className="App">
+        <div className="global-header">
+          <h1 className="header">Food Recipes</h1>
+          <p className="lead">
+            A curated list of recipes for the best homemade meal and delicacies.
         </p>
-      <hr className="my-4" />
-      <nav>
-        <Link to="/recipes">Recipes Are Here</Link>
-      </nav>
-      <Switch>
-        <Route path="/recipes" component={Recipes} />
-      </Switch>
-    </div>
-
-
-
+        </div>
+        <nav className="global-nav">
+          <Link className="link" to="/recipes">Recipes</Link>
+        </nav>
+        <Switch>
+          <Route path="/recipes" component={Recipes} />
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 

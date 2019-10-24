@@ -1,22 +1,29 @@
-.App {
-  text-align: center;
+
+.global-header {
+  margin: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.global-nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  background: #232323;
+  height: 64px;
+  overflow: hidden;
 }
 
-.App-link {
+.link,
+.link:visited  {
   color: #09d3ac;
+  display: inline-block;
+  flex: 0 1 15%;
+  height: 100%;
+  padding: 22px 0 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+.link:hover {
+  background-color: #121212;
+  cursor: pointer;
+  color: #fff;
 }
